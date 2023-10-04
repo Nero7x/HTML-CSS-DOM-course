@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="frist-div">
+        <h1>Programming Languages</h1>
+        <p>Thes are some Programming Languages:</p>
+        <ul class="Languages">
+            <li id="frist-li">JavaScript</li>
+            <p>we can interactive websites using JavaScript</p>
+            <li id="second-li">Kotlin</li>
+            <p>we can develop Android using Kotlin</p>
+            <li id="last-li">Swift</li>
+            <p>we can develop iOS apps using Swift</p>
+        </ul>
+        <script>
+            let LanguagesList =document.querySelector(".Languages")
+            let ios = document.querySelectorAll("li")[2]
+            ios.remove()
+            //LanguagesList.append(ruby)
+            console.log(LanguagesList)
+        </script>
+    </div>
+
+    <div>
+        <hr>
+        <h3>clicks <span id="clicks">0</span></h3>
+        <button type="button" onclick="add()">+</button>
+
+        <script>
+            let clicks =0;
+            function add() {
+                clicks++;
+                document.getElementById("clicks").innerText = clicks
+            }
+        </script>
+    </div>
+</body>
+</html>
